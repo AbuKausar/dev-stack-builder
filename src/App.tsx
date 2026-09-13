@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import TechnologyList from "./components/TechnologyList";
 import technologiesPromise from "./data/technologiesPromise";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       >
         <TechnologyList dataPromise={technologiesPromise()} />
       </Suspense>
+      <ToastContainer/>
     </div>
   );
 }

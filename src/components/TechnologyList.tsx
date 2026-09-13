@@ -3,6 +3,7 @@ import type { Technology } from "../types/technology";
 import TechnologyCard from "./TechnologyCard";
 import { brandGradientText } from "../constants/gradient";
 import YourStack from "./YourStack";
+import {toast} from "react-toastify";
 
 interface TechnologyListProps {
     dataPromise: Promise<Technology[]>;
@@ -17,20 +18,24 @@ function TechnologyList({ dataPromise }: TechnologyListProps) {
     // ===== Add to Stack handler =====
     function handleAdd(id: string) {
         if (selectedIds.includes(id)) {
+            toast.warning("This technology is already in your stack.");
             return;
         }
         setSelectedIds([...selectedIds, id]);
+        toast.success("Technology added to your stack!");
     }
 
     // ===== single item remove handler =====
     function handleRemove(id: string) {
         const remainingIds = selectedIds.filter((existingId) => existingId !== id);
         setSelectedIds(remainingIds);
+        toast.warning("Technology removed from your stack.");
     }
 
     // ===== all item remove handler =====
     function handleRemoveAll() {
         setSelectedIds([]);
+        toast.warning("All technologies removed from your stack.");
     }
 
     // ===== Finding technology from selected id =====
