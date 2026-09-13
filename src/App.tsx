@@ -5,6 +5,7 @@ import TechnologyList from "./components/TechnologyList";
 import technologiesPromise from "./data/technologiesPromise";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       >
         <TechnologyList dataPromise={technologiesPromise()} />
       </Suspense>
+      <Footer />
       <ToastContainer/>
     </div>
   );
