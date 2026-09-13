@@ -1,4 +1,4 @@
-
+import { brandGradient } from "../constants/gradient";
 function Footer() {
   return (
     <footer className="w-full border-t border-gray-100 bg-white">
@@ -12,7 +12,7 @@ function Footer() {
             {/* Brand */}
             <div className="flex items-center gap-2">
               {/* DS Badge */}
-              <div className="flex size-7 shrink-0 items-center justify-center rounded-md bg-gradient-to-br from-pink-500 to-violet-600">
+                <div className={`flex size-7 shrink-0 items-center justify-center rounded-md ${brandGradient} `}>
                 <span className="text-xs font-extrabold text-white">
                   DS
                 </span>
