@@ -67,7 +67,7 @@ React uses the `key` prop to identify which items have changed, been added, or b
 ### 6. What is conditional rendering? Show one place you used it.
 **Answer:**  
 Conditional rendering means rendering different UI elements based on a condition (like `true` or `false`).  
-**Example from project:** Displaying an empty state message when there are no items selected:
+**Example:** Displaying an empty state message when there are no items selected:
 ```jsx
 {cart.length === 0 ? (
   <p>No items in your list!</p>
